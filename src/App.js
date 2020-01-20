@@ -7,7 +7,7 @@ import SingleProduct from "./pages/SingleProduct";
 import Error from "./pages/Error";
 import Navbar from "./components/Navbar";
 import Modal from "./components/Modal";
-import Cart from "./pages/Cart";
+import CartPage from "./pages/Cart";
 
 import { Switch, Route } from "react-router-dom";
 
@@ -19,7 +19,7 @@ function App() {
         <Route exact path="/" component={Products} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/products/:slug" component={SingleProduct} />
-        <Route exact path="/cart" component={Cart} />
+        <Route exact path="/cart" component={CartPage} />
         <Route component={Error} />
       </Switch>
       <Modal />

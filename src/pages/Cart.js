@@ -5,7 +5,7 @@ import Cart from "../components/Cart/Cart";
 // import Banner from "../components/Banner";
 // import { Link } from "react-router-dom";
 
-class Contact extends Component {
+class CartPage extends Component {
 
     render() {
 
@@ -19,4 +19,4 @@ class Contact extends Component {
     }
 }
 
-export default Contact;
+export default CartPage;

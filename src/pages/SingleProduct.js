@@ -22,7 +22,7 @@ export default class SingleProduct extends Component {
   static contextType = ProductContext;
 
   render() {
-    const { getProduct } = this.context;
+    const { getProduct, addToCart, openModal } = this.context;
     const product = getProduct(this.state.slug);
 
     if (!product) {
@@ -41,7 +41,8 @@ export default class SingleProduct extends Component {
       size,
       price,
       ingredients,
-      images
+      images,
+      id
     } = product;
     // const [...defaultImages] = images;
     // console.log(defaultImages);
@@ -77,8 +78,11 @@ export default class SingleProduct extends Component {
             </article>
 
             <article>
-              <button style={{ width: "100px", height: "54px" }}>
-                <FaShoppingCart style={{ width: "80px", height: "34px" }} />
+              <button style={{ width: "100px", height: "54px" }} onClick={() => {
+                addToCart(id);
+                openModal(id);
+              }}>
+                <FaShoppingCart style={{ width: "80px", height: "34px" }} /> Add to Cart
               </button>
             </article>
           </div>

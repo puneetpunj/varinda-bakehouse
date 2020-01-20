@@ -23,7 +23,12 @@ export default class Cart extends Component {
                 </React.Fragment>
               );
             } else {
-              return <EmptyCart />;
+              return (
+                <React.Fragment>
+                  <Title title="my cart" />
+                  <EmptyCart />
+                </React.Fragment>
+              );
             }
           }}
         </ProductConsumer>

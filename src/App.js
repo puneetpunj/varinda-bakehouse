@@ -1,10 +1,12 @@
 import React from "react";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import SingleProduct from "./pages/SingleProduct";
 import Error from "./pages/Error";
 import Navbar from "./components/Navbar";
+import Modal from "./components/Modal";
 import Cart from "./pages/Cart";
 
 import { Switch, Route } from "react-router-dom";
@@ -18,9 +20,9 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/products/:slug" component={SingleProduct} />
         <Route exact path="/cart" component={Cart} />
-
         <Route component={Error} />
       </Switch>
+      <Modal />
     </>
   );
 }

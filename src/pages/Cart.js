@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Hero from "../components/Hero";
-import Cart from "../components/Cart";
+// import Hero from "../components/Hero";
+import Cart from "../components/Cart/Cart";
 
 // import Banner from "../components/Banner";
 // import { Link } from "react-router-dom";
@@ -11,9 +11,9 @@ class Contact extends Component {
 
         return (
             <>
-                <Hero >
-                    <Cart>Hello</Cart>
-                </Hero>
+                {/* <Hero > */}
+                <Cart>Hello</Cart>
+                {/* </Hero> */}
             </>
         );
     }
